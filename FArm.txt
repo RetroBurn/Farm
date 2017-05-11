@@ -1,0 +1,72 @@
+function turtle.blockDown()
+  local success, block = turtle.inspectDown()
+  if block.name == nil then
+    return nil
+  else
+    return block.name
+  end    
+end
+ 
+turtle.up()
+for i = 1, 10 do
+  for x = 1, 7 do
+  turtle.forward()
+  if turtle.blockDown() == "minecraft:wheat" then
+  turtle.digDown()
+  turtle.suckDown()
+  elseif turtle.blockDown() == "minecraft:wheat_seed" then
+  turtle.suckDown()
+  turtle.selectslot(1)
+  turtle.placeDown()
+  end
+  end
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.turnLeft()
+  for x = 1, 5 do
+  turtle.forward()
+  if turtle.blockDown() == "minecraft:wheat" then
+  turtle.digDown()
+  turtle.suckDown()
+  elseif turtle.blockDown() == "minecraft:wheat_seed" then
+  turtle.suckDown()
+  turtle.selectslot(1)
+  turtle.placeDown()
+  end
+  end
+  turtle.turnRight()
+  turtle.forward()
+  turtle.turnRight()
+  for i = 1, 5 do
+  turtle.forward()
+  if turtle.blockDown() == "minecraft:wheat" then
+  turtle.digDown()
+  turtle.suckDown()
+  elseif turtle.blockDown() == "minecraft:wheat_seed" then
+  turtle.suckDown()
+  turtle.selectslot(1)
+  turtle.placeDown()
+  end
+  end
+  turtle.forward()
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.forward()
+  turtle.turnLeft()
+  for i = 1, 8 do
+  turtle.forward()
+  end
+  turtle.down()
+  turtle.turnLeft()
+  for i = 1, 5 do
+  turtle.forward()
+  end
+  turtle.up()
+  turtle.forward()
+  turtle.selectslot(16)
+  turtle.dropDown()
+  turtle.back()
+  turtle.down()
+  turtle.back()
+  turtle.turnRight()
+end
