@@ -1,0 +1,42 @@
+function turtle.blockDown()
+  local success, block = turtle.inspectDown()
+  if block.name == nil then
+    return nil
+  else
+    return block.name
+  end    
+end
+ 
+turtle.up()
+  for x = 1, 7 do
+  turtle.forward()
+  if turtle.block() == "minecraft:reeds" then
+  turtle.dig()
+  turtle.suckDown()
+  end
+  end
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.dig()
+  turtle.forward()
+  turtle.suckDown
+  turtle.turnLeft()
+  for x = 1, 7 do
+  turtle.forward()
+  if turtle.block() == "minecraft:reeds" then
+  turtle.dig()
+  turtle.suckDown()
+  end
+  end
+  turtle.down()
+  turtle.turnLeft()
+  turtle.forward()
+  turtle.forward()
+  turtle.forward
+  turtle.up()
+  turtle.forward()
+  turtle.selectslot(1)
+  turtle.dropDown()
+  turtle.back()
+  turtle.down()
+  turtle.turnLeft()
