@@ -17,8 +17,8 @@ turtle.up()
   end
   turtle.turnLeft()
   turtle.forward()
-  turtle.dig()
   turtle.forward()
+  turtle.digDown
   turtle.suckDown
   turtle.turnLeft()
   for x = 1, 7 do
