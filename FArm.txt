@@ -8,7 +8,6 @@ function turtle.blockDown()
 end
  
 turtle.up()
-for i = 1, 10 do
   for x = 1, 7 do
   turtle.forward()
   if turtle.blockDown() == "minecraft:wheat" then
@@ -16,12 +15,14 @@ for i = 1, 10 do
   turtle.suckDown()
   elseif turtle.blockDown() == "minecraft:wheat_seed" then
   turtle.suckDown()
-  turtle.selectslot(1)
+  turtle.select(1)
   turtle.placeDown()
   end
   end
   turtle.turnLeft()
   turtle.forward()
+  turtle.digDown()
+  turtle.suckDown()
   turtle.turnLeft()
   for x = 1, 5 do
   turtle.forward()
@@ -30,13 +31,15 @@ for i = 1, 10 do
   turtle.suckDown()
   elseif turtle.blockDown() == "minecraft:wheat_seed" then
   turtle.suckDown()
-  turtle.selectslot(1)
+  turtle.select(1)
   turtle.placeDown()
   end
   end
-  turtle.turnRight()
+  turtle.turnLeft()
   turtle.forward()
-  turtle.turnRight()
+  turtle.digDown()
+  turtle.suckDown()
+  turtle.turnLeft()
   for i = 1, 5 do
   turtle.forward()
   if turtle.blockDown() == "minecraft:wheat" then
@@ -44,7 +47,7 @@ for i = 1, 10 do
   turtle.suckDown()
   elseif turtle.blockDown() == "minecraft:wheat_seed" then
   turtle.suckDown()
-  turtle.selectslot(1)
+  turtle.select(1)
   turtle.placeDown()
   end
   end
@@ -63,10 +66,9 @@ for i = 1, 10 do
   end
   turtle.up()
   turtle.forward()
-  turtle.selectslot(16)
+  turtle.select(16)
   turtle.dropDown()
   turtle.back()
   turtle.down()
   turtle.back()
   turtle.turnRight()
-end
